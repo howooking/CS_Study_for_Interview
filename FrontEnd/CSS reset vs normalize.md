@@ -19,8 +19,7 @@ CSS `reset`과 `nomalize`는 **cross browsing**을 위한 방법 중 HTML의 스
 - 단점
   - 표준화된 방법이 없다.
   - 스타일이 의미를 지니는 경우 초기화된 스타일로 인해 구분이 되지 않음.
-  - 
-![](https://velog.velcdn.com/images/junsgk/post/896794f9-8bc6-4981-bdc4-99eff5d13790/image.png)
+  ![](https://velog.velcdn.com/images/junsgk/post/896794f9-8bc6-4981-bdc4-99eff5d13790/image.png)
 
 ### Normalize
 - 브라우저 스타일을 초기화 시키는 것이 아니라 모든 브라우저에서 똑같이 보이도록 한다. 
