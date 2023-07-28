@@ -19,7 +19,8 @@ CSS `reset`과 `nomalize`는 **cross browsing**을 위한 방법 중 HTML의 스
 - 단점
   - 표준화된 방법이 없다.
   - 스타일이 의미를 지니는 경우 초기화된 스타일로 인해 구분이 되지 않음.
-  ![](https://velog.velcdn.com/images/junsgk/post/896794f9-8bc6-4981-bdc4-99eff5d13790/image.png)
+    
+    ![](https://velog.velcdn.com/images/junsgk/post/896794f9-8bc6-4981-bdc4-99eff5d13790/image.png)
 
 ### Normalize
 - 브라우저 스타일을 초기화 시키는 것이 아니라 모든 브라우저에서 똑같이 보이도록 한다. 
@@ -27,7 +28,7 @@ CSS `reset`과 `nomalize`는 **cross browsing**을 위한 방법 중 HTML의 스
 - 장점
   - 일관된 스타일을 보여줘야하는 크로스브라우징의 목적에 부합함
   - 태그 본연의 스타일이 내포하는 의미를 전달 할 수 있음. `<h1>은 글자가 크고 굵어! 중요한 내용이야!`
-![](https://velog.velcdn.com/images/junsgk/post/5cda6f3a-c159-432d-b8a2-8d6ac659d8aa/image.png)
+  ![](https://velog.velcdn.com/images/junsgk/post/5cda6f3a-c159-432d-b8a2-8d6ac659d8aa/image.png)
   - 지속적으로 업뎃 중인 공동 프로젝트.
   https://github.com/necolas/normalize.css
   - 필요한 부분만 선별적으로 normalize 할 수 있으며 설명이 잘 되어있음.
