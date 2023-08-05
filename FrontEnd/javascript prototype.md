@@ -2,10 +2,49 @@
 
 Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달리 자바스크립트는 프로토타입 기반 객체지향 프로그래밍 언어이다. 따라서 자바스크립트의 동작 원리를 이해하기 위해서는 프로토타입의 개념을 잘 이해하고 있어야 한다.
 
-클래스 기반 객체지향 프로그래밍 언어는 객체 생성 이전에 클래스를 정의하고 이를 통해 객체(인스턴스)를 생성한다. 하지만 프로토타입 기반 객체지향 프로그래밍 언어는 클래스 없이(Class-less)도 (ECMAScript 6에서 클래스가 추가되었다) 객체를 생성할 수 있다.
-
 ## 자바스크립트의 Prototype 이란?
-- 자바스크립트의 모든 객체는 자신의 부모 역할을 담당하는 객체와 연결되어 있으며 이 부모 객체를 Prototype이라고 함.
+- 자바스크립트의 모든 객체는 Prototype이라는 다른 객체와 연결되어 있다.
+- 이 프로토타입은 해당 객체가 가지고 있지 않은 속성이나 메서드에 접근할 수 있도록 도와주는 매우 중요한 개념이다.
+
+```js
+const howoo = {
+  age: 6,
+  color: 'gold',
+  isCute: true,
+};
+```
+
+- 다음과 같이 객체 리터럴로 객체를 생성하면 실제로는 아래와 같은 작업이 일어난다.
+
+```js
+const howoo = new Object({ age: 6, color: 'gold', isCute: true });
+```
+
+- 즉 Object 생성자 함수를 통해 객체가 생성이 된다.
+
+<img width="312" alt="image" src="https://github.com/howooking/CS_Study_for_Interview/assets/87072568/d17434aa-9387-4503-90b6-54bc2528b16f">
+
+- 생성된 객체에는 <b>[[Prototype]]</b> 이라는 것이 들어 있다.
+
+![image](https://github.com/howooking/CS_Study_for_Interview/assets/87072568/e8f5b57b-c600-43fe-a574-34844fee9870)
+
+- 크롬 과거 버전에서는 __proto__라고 표시 되나 이는 [[Prototype]]과 동일함
+- 실제로 [[Prototype]]에 접근하기 위해서는 howoo.__proto__를 해야함.
+
+<img width="301" alt="image" src="https://github.com/howooking/CS_Study_for_Interview/assets/87072568/e91e9739-51bb-41f5-97d6-b02726409c75">
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <img width="344" alt="image" src="https://github.com/howooking/CS_Study_for_Interview/assets/87072568/c60df264-353c-47e5-b60e-6ea15faf3607">
 
@@ -13,7 +52,7 @@ Java, C++과 같은 클래스 기반 객체지향 프로그래밍 언어와 달�
 
 <img width="282" alt="image" src="https://github.com/howooking/CS_Study_for_Interview/assets/87072568/880839c9-1ea0-4105-9d14-1854120791a9">
 
-- 열어보면 알 수 없는 일들이 가득함
+- 열어보면 알 수 없는 것들로 가득함.
 - Prototype 개념을 class 개념으로 이해하면 안된다.
   - 자바스크립트에서는 class가 없다
   - 자바스크립트에서는 '복사'를 통한 상속이 없다.
