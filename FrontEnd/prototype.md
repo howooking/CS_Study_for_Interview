@@ -82,6 +82,7 @@ function Cat(name) {
 }
 
 const howoo = new Cat('howoo');
+const mongo = new Cat('mango');
 howoo.salute(); // meow! my name is howoo
 ```
 <img width="692" alt="image-23" src="https://github.com/howooking/CS_Study_for_Interview/assets/87072568/8f7c7c90-c3c1-48db-b5b5-0b64f2e4a508">
