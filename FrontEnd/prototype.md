@@ -46,7 +46,7 @@ const howoo = {
   color: 'gold',
 };
 
-// cat객체와 howoo 객체는 서로 연관이 없는 객체이다.
+// cat객체와 howoo객체는 서로 연관이 없는 객체이다.
 
 cat.__proto__ === Object.prototype; // true
 howoo.__proto__ === Object.prototype; // true
@@ -54,10 +54,11 @@ howoo.__proto__ === Object.prototype; // true
 <img width="531" alt="image-17" src="https://github.com/howooking/CS_Study_for_Interview/assets/87072568/20ed08f3-f21e-43aa-a20d-d5b5505c0ec3">
 
 ```js
-howoo.__proto__ = cat;
+howoo.__proto__ = cat; // howoo의 __proto__를 cat객체에 연결
 
 howoo.__proto__ === cat; // true
 cat.__proto__ === Object.prototype; // true
+howoo.__proto__.__proto__ === Object.prototype; // true
 
 // prototype chain
 howoo.meow(); // meow
@@ -69,7 +70,7 @@ howoo.like; // undefined
 ### prototype
 
 - 생성자 함수에만 존재하는 속성
-- 함수가 생성자로 사용될 때 이 함수를 통해 생성될 객체의 부모 역할을 하는 객체(프로토타입 객체)를 가리킨다.
+- 함수가 생성자로 사용될 때 이 함수를 통해 생성될 객체의 부모 역할을 하는 객체(프로토타입 객체)를 말한다.
 
 ```js
 function Cat(name) {
@@ -91,7 +92,7 @@ mango.salute(); // meow! my name is mango
 
 ```js
 howoo.__proto__ === Cat.prototype; // true
-// 일반적인 객체였다면 howoo.__proto__는 Object.prototype을 가리키겠지만 생성자 함수로 생성된 객체는 생성자.prototype을 가리킨다.
+// 일반적인 객체였다면 howoo.__proto__는 Object.prototype을 가리키겠지만 생성자 함수로 생성된 객체는 생성자함수.prototype을 가리킨다.
 
 Cat.__proto__ === Function.prototype; // true
 Cat.prototype.constructor === Cat; // true
@@ -102,10 +103,10 @@ Function.prototype.__proto__ === Object.prototype; // true
 howoo.hasOwnProperty('color'); // false
 
 mango.salute === howoo.salute; // false
-//Cat 생성자 함수를 통해 생성된 howoo와 mango는 동일한 로직을 가지고 있지만 다른 각자서로 다른 메모리 공간을 차지하고 있음
+//Cat 생성자 함수를 통해 생성된 howoo.salute 과 mango.salute 은 동일한 로직을 가지고 있지만 다른 각자 다른 메모리 공간을 차지하고 있음
 ```
 
-- 생성자함수.prototpye안에 공통의 로직을 넣을 수 있음
+- 생성자함수.prototpye을 통해 공통의 로직을 prototype 객체에 넣을 수 있음
 
 ```js
 Cat.prototype.jump = function () {
