@@ -23,7 +23,7 @@ cat.hasOwnProperty('isCute'); // true
 ```
 <img width="304" alt="image-11" src="https://github.com/howooking/CS_Study_for_Interview/assets/87072568/26a60d4e-df4a-43b6-b2b7-3733c2232fc9">
 
-# \_\_proto\_\_(프로토링크) vs prototype(프로토타입)
+# \_\_proto\_\_ vs prototype
 
 ### \_\_proto\_\_
 
